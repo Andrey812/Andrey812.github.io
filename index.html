@@ -11,9 +11,90 @@ This file is just text written in my favorite editor - vim
     <title>Andrey's blog</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <meta charset="utf-8">
+    <!--
+    <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
+    -->
  </head>
  <body>
+    <!-- JS of counters BEGIN -->
+    <script type="text/javascript">//VK.init({apiId: 4327422, onlyWidgets: true});</script>
+    <!-- JS of counters END -->
+
     <div class="flow">
+<!-- post sample
+        <div class="post">
+            <span class="title">
+                <h3>TITLE</h3>
+            </span>
+            <span class="info">
+                Unix time: 1398340126 (24 Apr 2014 15:48)</span>
+            <span class="data">
+                <p>TEXT</p>
+                <span class="code">
+                </span>
+            </span>
+            <span class="bottom">
+                <p></p>
+            <span>
+        </div>
+-->
+
+<!-- post 2 BEGIN -->
+        <div class="post">
+            <span class="title">
+                <h3>Управление воспроизведением Audacious с кливиатуры</h3>
+            </span>
+            <span class="info">
+                Unix time: 1398414544 (25 Apr 2014 12:29)</span>
+            <span class="data">
+                <p>Для прослушивания музыки во время работы я пользуюсь плеером Audacious (v. 3.4 for Ubuntu package).
+                В процессе работы я всегда стараюсь свести время манипуляций мышью к минимому за счет использования
+                "горячих" клавиш клавиатуры. Клавиатура у меня обычная, не мультимедийная и навесить простые операции
+                с плеером, вроде "play", "pause", "громче", "тише" я могу только при помощи клавишных комбинаций.
+                </p>
+                <p>
+                Настраивается управление плеером при помощи Audacious плагина <b>"Global Hotkey Plugin"</b>.
+                </p>
+                <p>
+                Как правило, данный плагин уже присутствует в сборке плеера. Для его настройки следует зайти в
+                <b>меню Audacious</b> -> <b>"Параметры"</b> -> <b>"Модули"</b>. В окне модулей выбрать вкладку <b>"Общие"</b>. Найти в списке
+                модуль <b>"Глобальные горячие клавиши"</b>. Включить модуль, если не активен (поставить галку).
+                </p>
+                <p>
+                Выбрав нужный нам модуль в строке, нажать <b>"Параметры"</b>
+                </p>
+                <p>
+                Привязка клавишь происходит путём выбора в левой колонке из выпадающего списка возможных
+                действий с проигрывателем, а в левой колонке, щелчком по форме ввода, указать свободную комбинацию
+                клавишь для данного действия.
+                </p>
+                <p><b>Мой список горячих клавиш:</b></p>
+                <p>
+                <table cellpadding="4" cellspacing="4">
+                        <tr>
+                            <td><b>Ctrl + Shift + Numpad Enter</b></td>
+                            <td>Pause/Play</td>
+                        </tr>
+                        <tr>
+                            <td><b>Ctrl + Shift + Numpad 0</b></td>
+                            <td>Stop</td>
+                        </tr>
+                        <tr>
+                            <td><b>Ctrl + Shift + Numpad +</b></td>
+                            <td>Увеличить громкость</td>
+                        </tr>
+                        <tr>
+                            <td><b>Ctrl + Shift + Numpad -</b></td>
+                            <td>Уменьшить громкость</td>
+                        </tr>
+                </table>
+                </p>
+            </span>
+            <span class="bottom">
+                <p></p>
+            <span>
+        </div>
+<!-- post 2 END -->
 
 <!-- post 1 BEGIN -->
         <div class="post">
@@ -21,7 +102,7 @@ This file is just text written in my favorite editor - vim
                 <h3>Mojolicious HTTP client</h3>
             </span>
             <span class="info">
-                24 Apr 2014 15:48 [1398340126]</span>
+                Unix time: 1398340126 (24 Apr 2014 15:48)</span>
             <span class="data">
                 <p>
                 Недавно мне пришлось решать задачу получения данных с web
