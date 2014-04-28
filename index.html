@@ -11,20 +11,15 @@ This file is just text written in my favorite editor - vim
     <title>Andrey's blog</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <meta charset="utf-8">
-    <!--
     <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
-    -->
  </head>
  <body>
-    <!-- JS of counters BEGIN -->
-    <script type="text/javascript">//VK.init({apiId: 4327422, onlyWidgets: true});</script>
-    <!-- JS of counters END -->
-
+    <script type="text/javascript">VK.init({apiId: 4327422, onlyWidgets: true});</script>
     <div class="flow">
 <!-- post sample
         <div class="post">
-            <span class="title">
-                <h3>TITLE</h3>
+           <span class="title">
+                <a id="post_N">TITLE</a>
             </span>
             <span class="info">
                 Unix time: 1398340126 (24 Apr 2014 15:48)</span>
@@ -33,16 +28,25 @@ This file is just text written in my favorite editor - vim
                 <span class="code">
                 </span>
             </span>
-            <span class="bottom">
-                <p></p>
-            <span>
+            <div class="bottom">
+                <div id="vk_like_post_N"></div>
+                <script type="text/javascript">
+                     VK.Widgets.Like('vk_like_post_N', {
+                        'type': 'button',
+                        'verb':'1',
+                        'width':'350',
+                        pageTitle: 'POST_N_TITLE',
+                        pageUrl: 'http://andrey812.github.io#post_N'
+                    });
+                </script>
+            </div>
         </div>
 -->
 
 <!-- post 2 BEGIN -->
         <div class="post">
             <span class="title">
-                <h3>Управление воспроизведением Audacious с клaвиатуры</h3>
+                <a id="post_2">Управление воспроизведением Audacious с клaвиатуры</a>
             </span>
             <span class="info">
                 Unix time: 1398414544 (25 Apr 2014 12:29)</span>
@@ -90,16 +94,25 @@ This file is just text written in my favorite editor - vim
                 </table>
                 </p>
             </span>
-            <span class="bottom">
-                <p></p>
-            <span>
+            <div class="bottom">
+                <div id="vk_like_post_2"></div>
+                <script type="text/javascript">
+                     VK.Widgets.Like('vk_like_post_2', {
+                        'type': 'button',
+                        'verb':'1',
+                        'width':'350',
+                        pageTitle: 'Управление воспроизведением Audacious с клaвиатуры',
+                        pageUrl: 'http://andrey812.github.io#post_2'
+                    });
+                </script>
+            </div>
         </div>
 <!-- post 2 END -->
 
 <!-- post 1 BEGIN -->
         <div class="post">
             <span class="title">
-                <h3>Mojolicious HTTP client</h3>
+                <a id="post_1">Mojolicious HTTP client</a>
             </span>
             <span class="info">
                 Unix time: 1398340126 (24 Apr 2014 15:48)</span>
@@ -145,12 +158,18 @@ say $res->body;
 # $self->rendered($res->code);
                 </span>
             </span>
-            <span class="bottom">
-                <p></p>
-                <!--
-                <p>VK&nbsp;FB&nbsp;Twitter</p>
-                -->
-            <span>
+            <div class="bottom">
+                <div id="vk_like_post_1"></div>
+                <script type="text/javascript">
+                     VK.Widgets.Like('vk_like_post_1', {
+                        'type': 'button',
+                        'verb':'1',
+                        'width':'350',
+                        pageTitle: 'Mojolicious HTTP client',
+                        pageUrl: 'http://andrey812.github.io#post_1'
+                    });
+                </script>
+            </div>
         </div>
 <!-- post 1 END -->
 
