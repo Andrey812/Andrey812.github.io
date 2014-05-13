@@ -45,6 +45,51 @@ This file is just text written in my favorite editor - vim
             </div>
         </div>
 -->
+<!-- post 5 BEGIN -->
+        <div class="post">
+           <span class="title">
+                <a id="post_5">Заметки о SSH</a>
+            </span>
+            <span class="info">
+                Unix time: 1399978242 (13 May 2014 14:50)</span>
+            <span class="data">
+                <p><b>ssh-keygen</b> - генерация пары публичного и приватного ключей</p>
+                <p><b>ssh-add [path_to_private_key]</b> - добавление приватного ключа для использования в ssh agent</p>
+                <p><b>Применение публичного ключа на сервере</b></p>
+<span class="code">
+scp key.pub username@server.com:.
+ssh username@server.com
+mkdir ~/.ssh
+cat key.pub >> .ssh/authorized_keys
+service ssh restart
+
+</span>
+            <p><b>Копирование файла на сервер с паролем</b></p>
+<span class="code">
+sshpass -p scp ...
+
+</span>
+            <p><b>Выполнение удалённой команды на сервере</b></p>
+<span class="code">
+ssh username@server.com 'ls'
+
+# Interactive command
+ssh -t username@server.com 'top'
+
+</span>
+            <p><b>Использование git через ssh для Github </b></p>
+<span class="code">
+git remote set-url origin git@github.com:githubusername/projectname.git
+
+</span>
+            </span>
+            <div class="bottom">
+                <div id="vk_like_post_5"></div>
+                </script>
+            </div>
+        </div>
+<!-- post 5 END -->
+
 <!-- post 4 BEGIN -->
         <div class="post">
            <span class="title">
