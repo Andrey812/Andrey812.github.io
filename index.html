@@ -82,6 +82,13 @@ ssh -t username@server.com 'top'
 git remote set-url origin git@github.com:githubusername/projectname.git
 
 </span>
+
+            <p><b>Убрать "долгое" ssh подключение</b></p>
+<span class="code">
+# Server side
+sudo echo "UseDNS no" >> /etc/ssh/sshd_config
+</span>
+
             </span>
             <div class="bottom">
                 <div id="vk_like_post_5"></div>
