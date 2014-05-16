@@ -1,15 +1,30 @@
 body {
     background-color: #c0c0c0;
+    font-family: verdana,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 150%;
     margin:0;
     padding:0;
 }
 
+div.contents {
+    width: 440px;
+    float: left;
+    position: fixed;
+    margin: 20px 0 0 40px;
+    padding: 10px 10px 10px 40px;
+    background-color: #e8e8e8;
+    border: 1px solid #888888;
+    box-shadow: 8px 8px 4px #888888;
+}
+
+div.contents a {
+    display: block;
+    text-decoration: none;
+}
+
 div.flow {
     width: 800px;
-    line-height: 150%;
-    font-size: 14px;
-    font-family: verdana,helvetica,arial,sans-serif;
-
     position: absolute;
     margin: 20px 0 0 -400px;
     left: 50%;
