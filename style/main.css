@@ -14,7 +14,7 @@ div.contents {
     height: 40px;
     position: fixed;
     background-color: #e8e8e8;
-    background-image: url('http://andrey812.github.io/pics/common_menu.png');
+    background-image: url('/pics/common_menu.png');
     border: 1px solid #888888;
     box-shadow: 8px 8px 4px #888888;
 }
