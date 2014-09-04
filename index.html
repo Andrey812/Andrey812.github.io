@@ -11,14 +11,8 @@ This file is just text written in my favorite editor - vim
     <title>Andrey's blog</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <meta charset="utf-8">
-    <!--
-    <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
-    -->
  </head>
  <body>
-    <!--
-    <script type="text/javascript">VK.init({apiId: 4334789, onlyWidgets: true});</script>
-    -->
     <div class="flow">
 <!-- post sample
         <div class="post">
@@ -33,21 +27,13 @@ This file is just text written in my favorite editor - vim
                 </span>
             </span>
             <div class="bottom">
-                <div id="vk_like_post_N"></div>
-                <script type="text/javascript">
-                     VK.Widgets.Like('vk_like_post_N', {
-                        'type': 'full',
-                        'verb':'1',
-                        'pageTitle': 'POST_N_TITLE',
-                        'pageUrl': 'http://andrey812.github.io#post_N'
-                    });
-                </script>
             </div>
         </div>
 -->
     <div class="contents">
         <!--
         <h3>Оглавление</h3>
+        <a href="index.html#post_8">Перевод с любого языка в Linux</a>
         <a href="index.html#post_7">Мой список плагинов vim</a>
         <a href="index.html#post_6">Chromium plugin "Chromebleed"</a>
         <a href="index.html#post_5">Заметки о SSH</a>
@@ -57,6 +43,47 @@ This file is just text written in my favorite editor - vim
         <a href="index.html#post_1">Mojolicious HTTP client</a>
         -->
     </div>
+<!-- post 8 BEGIN -->
+        <div class="post">
+           <span class="title">
+                <a id="post_8">Перевод с любого языка в Linux</a>
+            </span>
+            <span class="info">
+                Unix time: 1409838552 (04 Sep 2014 17:49)</span>
+            <span class="data">
+                <p>
+                    Использую очень удобный метод перевода любого выделленого на экране фрагмента текста с любого языка на русский.
+                    Данный метод использует связку приложений для копирования выделенного текста, запроса google переводчика и
+                    вывода ответа в виде всплывающей подсказки рабочей среды Linux.
+                </p>
+                <p>
+                    <b>Обратите внимание</b>, что такой перевод приложений придуман не мной, а взят <a href="http://habrahabr.ru/post/137215/">отсюда</a>.
+                </p>
+                <p>
+                    Итак, настриваем:
+                    <ul>
+                        <li>sudo apt-get install libnotify-bin xsel</li>
+                        <li>vim seltr в любой директории (содержимое файла см. ниже)</li>
+                        <li>sudo chmod 777 ./seltr &amp;&amp; sudo mv ./seltr /usr/bin/</li>
+                        <li>Привязать необходимую комбинацию клавиш к вызову программы seltr</li>
+                    </ul>
+                </p>
+                <p>
+                Содержимое файла setlr. Изначально вторая строка - одна целая.
+                </p>
+<span class="code">
+#!/usr/bin/env bash
+notify-send -u critical "$(xsel -o)"
+"$(wget -U "Mozilla/5.0" -qO - "http://translate.google.com/translate_a/t?client=t&amp;text=$(xsel -o
+| sed "s/[\"'&lt;&gt;]//g")&amp;sl=auto&amp;tl=ru"
+| sed 's/\[\[\[\"//' | cut -d \" -f 1)"
+</span>
+            </span>
+            <div class="bottom">
+            </div>
+        </div>
+<!-- post 8 END -->
+
 
 <!-- post 7 BEGIN -->
         <div class="post">
